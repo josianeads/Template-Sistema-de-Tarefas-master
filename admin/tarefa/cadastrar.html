@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sistema de Gerenciamento de Tarefas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css"
+        integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+
+    <!-- font-awesome biblioteca de icones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <!-- summernote - editor de texto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.css">
+
+    <!-- Corrigir conflito summernote e popover bootstrap -->
+    <style>
+        body .popover {
+            display: none !important;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="../../assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <strong>TodoList</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../index.html">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../sobre-nos.html">Sobre nós</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../planos.html">Planos</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Minhas Tarefas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pagina/index.html">Páginas</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../plano/index.html">Planos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="../usuario/index.html">Usuários</a>
+                    </li>
+
+                    <li class="nav-item ml-2">
+                        <img src="../../uploads/perfil/default.jpg" class="rounded-circle" width="40" height="40"
+                            alt="">
+                        Nome do Usuário |
+                        <a class="btn btn-link" href="../../login/logout.html">Sair</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim Cabeçalho -->
+
+    <!-- Conteúdo -->
+
+    <main class="container mt-5 mb-5">
+
+        <div class="row">
+            <div class="col-sm-9 mx-auto">
+
+                <h3 class="text-center m-4">Cadastrar Tarefa</h3>
+
+                <form action="#" method="post">
+
+                    <div class="form-group">
+
+                        <label for="tarefa">Tarefa</label>
+                        <input type="tarefa" name="tarefa" id="tarefa" class="form-control" value=""
+                            placeholder="Digite o Nome" required autofocus>
+                        <small class="text-danger">Campo Obrigatório.</small>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="col-md-7">
+                            <label for="descricao">Descrição</label>
+                            <textarea name="descricao" id="descricao" class="form-control" rows="5"></textarea>
+                        </div>
+
+                        <div class="col-md-4 offset-md-1">
+
+                            <div class="form-group">
+                                <label for="prioridade">Prioridade</label>
+                                <select name="prioridade" id="prioridade" class="form-control">
+                                    <option value="Baixa">Baixa</option>
+                                    <option value="Normal">Normal</option>
+                                    <option value="Alta">Alta</option>
+                                    <option value="Urgente">Urgente</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <p>Status</p>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="status1" name="status" value="0"
+                                        class="custom-control-input" checked>
+                                    <label class="custom-control-label" for="status1">Em Processo</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="status2" name="status" value="1"
+                                        class="custom-control-input">
+                                    <label class="custom-control-label" for="status2">Finalizada</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group mt-5">
+                        <button class="btn btn-primary" type="submit">Salvar</button>
+                        <a class="btn btn-light" href="index.html">Cancelar</a>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Fim Conteúdo -->
+
+    <!-- Rodapé -->
+
+    <footer class="container bg-light mt-5">
+        <div class="row">
+            <div class="col-12 p-3 text-center">
+                2019 &copy; - Todos os Direitos são reservados
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js"
+        integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous">
+    </script>
+
+    <!-- Summernote - editor de texto -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/lang/summernote-pt-BR.min.js"></script>
+
+
+
+    <script>
+        $(document).ready(function () {
+
+            //https://summernote.org/deep-dive/ google: summernote basic toolbar
+
+            $('#descricao').summernote({
+                toolbar: [
+                    // [groupName, [list of button]]
+                    ['style', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['color', ['color']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['picture']]
+                ],
+                lang: 'pt-BR',
+                height: 200, // set editor height
+
+            });
+        });
+    </script>
+
+    <!-- Fim Rodapé -->
+
+</body>
+
+</html>
